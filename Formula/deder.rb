@@ -1,22 +1,22 @@
-# Generated with JReleaser 1.23.0 at 2026-03-14T00:27:37.536877876Z
+# Generated with JReleaser 1.23.0 at 2026-03-16T01:44:59.478802256Z
 
 class Deder < Formula
   desc "Deder Build Tool"
   homepage "https://github.com/sake92/deder"
-  version "0.0.13"
+  version "0.0.14"
   license "Apache-2"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sake92/deder/releases/download/v0.0.13/deder-client-linux-x86_64", :using => :nounzip
-    sha256 "aadbed91cd864acd6d5532d9fba98467cfe5de6c6f4eba57b1f4fa8840713ff0"
+    url "https://github.com/sake92/deder/releases/download/v0.0.14/deder-client-linux-x86_64", :using => :nounzip
+    sha256 "6486ec6405c9caa10cc429932a3091b383d1e6ab00c27ce0839a2e98930f3e5b"
 
     def install
       bin.install "deder-client-linux-x86_64" => "deder"
     end
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sake92/deder/releases/download/v0.0.13/deder-client-osx-aarch_64", :using => :nounzip
-    sha256 "b43292b35fded7121a54a6a3dba2f072e4d5d449dddc541a3e79ed2909ba1a8b"
+    url "https://github.com/sake92/deder/releases/download/v0.0.14/deder-client-osx-aarch_64", :using => :nounzip
+    sha256 "b119cf718a40b889224e22092800a4fdb8321b208b7b2a67f5099e905c28d329"
 
     def install
       bin.install "deder-client-osx-aarch_64" => "deder"
@@ -26,6 +26,6 @@ class Deder < Formula
 
   test do
     output = shell_output("#{bin}/deder --version")
-    assert_match "0.0.13", output
+    assert_match "0.0.14", output
   end
 end
